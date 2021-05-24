@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { setupConfig } from '@ionic/react'
 
 import './styles/index.css'
 import App from './App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
+
+setupConfig({ mode: 'ios' })
 
 ReactDOM.render(
   <React.StrictMode>

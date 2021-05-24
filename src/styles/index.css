@@ -2,9 +2,9 @@
 @import '@ionic/react/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-/* @import '@ionic/react/css/normalize.css'; */
-/* @import '@ionic/react/css/structure.css'; */
-/* @import '@ionic/react/css/typography.css'; */
+@import '@ionic/react/css/normalize.css';
+@import '@ionic/react/css/structure.css';
+@import '@ionic/react/css/typography.css';
 
 /* Optional CSS utils that can be commented out */
 /* @import '@ionic/react/css/padding.css'; */
@@ -20,6 +20,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities'; */
+
+ion-button.button-large {
+  height: 3.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: initial;
+}
+
+ion-button {
+  --border-radius: 14px;
+}
+
+ion-item.item-input {
+  --min-height: auto;
+  --padding-start: 4px;
+}
+
+ion-input,
+input {
+  --tw-text-opacity: 1;
+  --placeholder-color: rgba(156, 163, 175, var(--tw-text-opacity));
+}

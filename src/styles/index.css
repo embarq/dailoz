@@ -38,6 +38,10 @@ ion-button {
   --border-radius: 14px;
 }
 
+.rounded-full {
+  --border-radius: 9999px;
+}
+
 ion-item.item-input {
   --min-height: auto;
   --padding-start: 4px;

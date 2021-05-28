@@ -40,7 +40,7 @@ const TabsNav: React.FC = () => {
 
   return (
     <nav>
-      <ul className="list-none flex items-center justify-between fixed left-8 right-8 bottom-8 p-3 bg-white rounded-3xl shadow-2xl-primary">
+      <ul className="list-none flex items-center justify-between fixed left-8 right-8 bottom-8 p-3 bg-white rounded-2xl shadow-2xl-primary">
         <li>
           <IonButton
             fill="clear"

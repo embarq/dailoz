@@ -71,3 +71,9 @@ input {
   --tw-text-opacity: 1;
   --placeholder-color: rgba(156, 163, 175, var(--tw-text-opacity));
 }
+
+.calendar-picker-ion-modal {
+  --width: 336px;
+  --height: 440px;
+  --border-radius: 20px;
+}

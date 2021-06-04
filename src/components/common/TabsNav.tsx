@@ -14,14 +14,14 @@ import { useEffect, useState } from 'react'
 
 enum PageLinkName {
   Home = 'home',
-  Task = 'task',
+  Tasks = 'tasks',
   Graphic = 'graphic',
   Profile = 'profile',
 }
 
 const PagesRouteMapping: Record<string, PageLinkName> = {
   '/app/home': PageLinkName.Home,
-  '/app/task': PageLinkName.Task,
+  '/app/tasks': PageLinkName.Tasks,
   '/app/graphic': PageLinkName.Graphic,
   '/app/profile': PageLinkName.Profile,
 }
@@ -43,6 +43,7 @@ const TabsNav: React.FC = () => {
       <ul className="list-none flex items-center justify-between fixed left-8 right-8 bottom-8 p-3 bg-white rounded-2xl shadow-2xl-primary">
         <li>
           <IonButton
+            routerLink="/app/home"
             fill="clear"
             type="button"
             size="small"
@@ -60,11 +61,12 @@ const TabsNav: React.FC = () => {
         </li>
         <li>
           <IonButton
+            routerLink="/app/tasks"
             fill="clear"
             type="button"
             size="small"
             className={
-              activeRoute === PageLinkName.Task
+              activeRoute === PageLinkName.Tasks
                 ? 'text-indigo-700'
                 : 'text-gray-300'
             }>
@@ -72,7 +74,7 @@ const TabsNav: React.FC = () => {
               slot="icon-only"
               size="small"
               icon={
-                activeRoute === PageLinkName.Task ? calendar : calendarOutline
+                activeRoute === PageLinkName.Tasks ? calendar : calendarOutline
               }
             />
           </IonButton>

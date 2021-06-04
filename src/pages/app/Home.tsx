@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         <IonHeader collapse="condense">
           <IonToolbar style={{ '--border-width': '0', '--min-height': '64px' }}>
             <IonTitle size="large" className="px-6">
-              <h2 className="font-semibold text-gray-700">Hi, User</h2>
+              <h2 className="font-semibold text-gray-700 text-3xl">Hi, User</h2>
               <p className="text-sm font-normal text-gray-500">
                 Let’s make this day productive
               </p>
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
         <IonHeader className="mt-8">
           <IonToolbar style={{ '--border-width': '0', '--min-height': '64px' }}>
             <IonTitle size="large" className="px-6">
-              <h2 className="font-semibold text-gray-700">My Tasks</h2>
+              <h2 className="font-semibold text-gray-700 text-2xl">My Tasks</h2>
             </IonTitle>
           </IonToolbar>
         </IonHeader>
@@ -52,7 +52,9 @@ const Home: React.FC = () => {
         <IonHeader>
           <IonToolbar style={{ '--border-width': '0', '--min-height': '64px' }}>
             <IonTitle size="large" className="px-6">
-              <h2 className="font-semibold text-gray-700">Today Tasks</h2>
+              <h2 className="font-semibold text-gray-700 text-2xl">
+                Today Tasks
+              </h2>
             </IonTitle>
             <IonButtons slot="primary" className="self-end pr-4">
               <IonButton fill="clear">
@@ -61,7 +63,6 @@ const Home: React.FC = () => {
             </IonButtons>
           </IonToolbar>
         </IonHeader>
-
       </IonContent>
     </IonPage>
   )

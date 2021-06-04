@@ -38,6 +38,19 @@ ion-button {
   --border-radius: 14px;
 }
 
+ion-button.unstyled {
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  width: auto;
+  height: auto;
+  padding: unset;
+  margin: unset;
+  font-size: initial;
+  font-weight: initial;
+}
+
 .rounded-full {
   --border-radius: 9999px;
 }

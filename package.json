@@ -9,7 +9,8 @@
     "format:w": "npm run format -- --w",
     "lint": "eslint src/ --fix",
     "start": "craco start",
-    "test": "craco test"
+    "test": "craco test",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "dependencies": {
     "@capacitor/core": "3.0.0",
@@ -58,6 +59,7 @@
     "eslint-plugin-react": "^7.23.2",
     "postcss": "^7",
     "prettier": "^2.3.0",
+    "source-map-explorer": "^2.5.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "description": "An Ionic project",

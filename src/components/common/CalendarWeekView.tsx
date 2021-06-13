@@ -19,7 +19,7 @@ interface CalendarWeekViewCell {
 }
 
 type Props = {
-  selectedDate: Date,
+  selectedDate: Date
   onSelectDate?: (date: Date) => unknown
 }
 
@@ -54,10 +54,11 @@ const CalendarWeekView: React.FC<Props> = ({ selectedDate, onSelectDate }) => {
           <IonButton
             fill="clear"
             key={date}
-            onClick={() => isCallable(onSelectDate) && onSelectDate(new Date(date))}
-            style={{'--border-radius': '12px'}}
-            className="unstyled transform-gpu transition-transform ease-in-out duration-75 active:scale-90">
-
+            onClick={() =>
+              isCallable(onSelectDate) && onSelectDate(new Date(date))
+            }
+            style={{ '--border-radius': '12px' }}
+            className="ion-button-unstyled transform-gpu transition-transform ease-in-out duration-75 active:scale-90">
             <div
               className={classNames(
                 'flex flex-col items-center justify-center w-12 py-3 rounded-xl',
@@ -68,7 +69,6 @@ const CalendarWeekView: React.FC<Props> = ({ selectedDate, onSelectDate }) => {
               <span className="uppercase font-medium">{weekDayLabel}</span>
               <span className="text-sm mt-1">{dayLabel}</span>
             </div>
-
           </IonButton>
         ))}
     </div>

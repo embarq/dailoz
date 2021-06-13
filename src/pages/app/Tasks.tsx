@@ -16,7 +16,9 @@ import { calendarClearOutline } from 'ionicons/icons'
 import { formatDate } from '../../utils/date'
 import CalendarWeekView from '../../components/common/CalendarWeekView'
 import { isValid } from 'date-fns/esm'
-import CalendarPicker, { Props as CalendarPickerProps } from '../../components/common/CalendarPicker'
+import CalendarPicker, {
+  Props as CalendarPickerProps,
+} from '../../components/common/CalendarPicker'
 
 const datepickerLabelFormat = (date: Date): string =>
   formatDate(date, {
@@ -35,15 +37,19 @@ const TasksPage: React.FC = () => {
   const pickerProps: CalendarPickerProps = {
     date: selectedDate,
     onDismiss: handlePickerDismiss,
-    onSave: handlePickerSave
+    onSave: handlePickerSave,
   }
-  const [presentPicker, dismissPicker] = useIonModal(CalendarPicker, pickerProps)
-  const openCalendarPicker = () => presentPicker({
-    cssClass: 'calendar-picker-ion-modal'
-  })
+  const [presentPicker, dismissPicker] = useIonModal(
+    CalendarPicker,
+    pickerProps
+  )
+  const openCalendarPicker = () =>
+    presentPicker({
+      cssClass: 'calendar-picker-ion-modal',
+    })
 
   const handleSelectDate = (date: Date) => {
-    isValid(date) && setSelectedDate(date);
+    isValid(date) && setSelectedDate(date)
   }
 
   return (
@@ -99,7 +105,10 @@ const TasksPage: React.FC = () => {
           </IonHeader>
 
           <div className="px-6 pt-4">
-            <CalendarWeekView selectedDate={selectedDate} onSelectDate={handleSelectDate} />
+            <CalendarWeekView
+              selectedDate={selectedDate}
+              onSelectDate={handleSelectDate}
+            />
           </div>
         </section>
 

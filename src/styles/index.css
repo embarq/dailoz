@@ -17,34 +17,7 @@
 /* Theme variables */
 @import '../theme/variables.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-  .centered {
-    @apply flex justify-center items-center;
-  }
-}
-
-ion-button.button-large {
-  height: 3.25rem;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 17px;
-}
-
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: initial;
-}
-
-ion-button {
-  --border-radius: 14px;
-}
-
-ion-button.unstyled {
+.ion-button-unstyled {
   --padding-top: 0;
   --padding-bottom: 0;
   --padding-start: 0;
@@ -55,6 +28,26 @@ ion-button.unstyled {
   margin: unset;
   font-size: initial;
   font-weight: initial;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .centered {
+    @apply flex justify-center items-center;
+  }
+}
+
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: initial;
+}
+
+ion-button {
+  --border-radius: 14px;
 }
 
 .rounded-full {
@@ -74,6 +67,7 @@ input {
 
 .calendar-picker-ion-modal {
   --width: 336px;
-  --height: 440px;
+  --height: 452px;
+  --min-height: 452px;
   --border-radius: 20px;
 }
